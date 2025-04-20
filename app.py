@@ -21,7 +21,7 @@ with open('kmeans_model.pkl', 'rb') as f:
     loaded_model = pickle.load(f)
 
 #load dataset
-X, _ = make_blobs(n_samples=300, centers=loaded_model.n_cluater, cluster_std=0.60, random_state=0)
+X, _ = make_blobs(n_samples=300, centers=loaded_model.n_cluaters, cluster_std=0.60, random_state=0)
 
 #Predict using the loaded model
 y_kmeans = loaded_model.predict(X)
